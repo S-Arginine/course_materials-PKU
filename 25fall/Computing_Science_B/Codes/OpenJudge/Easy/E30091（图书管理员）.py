@@ -1,0 +1,6 @@
+l=int(input())
+n=int(input())
+nums=sorted(list(map(int,input().split())))
+mi=max(min(nums[i],l+1-nums[i]) for i in range(n))
+ma=max(max(nums[0],l+1-nums[0]),max(nums[-1],l+1-nums[-1]))
+print(f'{mi} {ma}')
